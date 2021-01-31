@@ -17,7 +17,7 @@ function Preview(props: PreviewProps) {
       },
       body: JSON.stringify({
         rendererType: 'atlassian-wiki-renderer',
-        unrenderedMarkup: props.template.content
+        unrenderedMarkup: props.template.hints || props.template.content
       })
     })
     .then((response) => {

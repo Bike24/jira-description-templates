@@ -3,10 +3,11 @@
     "id": "simple_en",
     "name": "Simple [en]",
     "content": "*WHO* Requestee\n\n*WHAT* About\n\n*WHY* Reason\n\n*ACCEPTANCE CRITERIA*\n\n * Some\n * criteria\n * …",
-    "hints": "Some additional info goes here. It's otional."
+    "hints": "*WHO* Give information on who has the most insight and/or who is responsible to get the required information. If in doubt it is yourself.\n\n*WHAT* Describe the bug in question, the requested feature or what tasks should be done. Don't be shy to provide as much information as possible without being just noisy. \n\n*WHY* What's the goal here. Simple if it is a bug but if it is a feature request? It helps to decide what implementation might be favourable or what side effects to look out. \n\n*ACCEPTANCE CRITERIA*\n * This is a checklist!\n * Each criteria is subject to be tested by the reviewer. \n * Each criteria is a good candidate to write a test for.\n * Changing criterias later on needs to be explained and documented."
   },{
     "id": "simple_de",
     "name": "Simple [de]",
-    "content": "*WER* Owner\n\n*WAS* Erläuterung\n\n*WARUM* Grund\n\n*AKZEPTANZKRITERIEN*\n\n * Liste an\n * Kriterien\n * …"
+    "content": "*WER* Owner\n\n*WAS* Erläuterung\n\n*WARUM* Grund\n\n*AKZEPTANZKRITERIEN*\n\n * Liste an\n * Kriterien\n * …",
+    "hints": "*WER* Hier sollten diejenigen eingetragen werden, die am meisten zu dieser Aufgabe sagen können oder die verantwortlich sind, diese zu Infos zu beschaffen. Im Zweifel Du selbst.\n\n*WAS* Beschreibe den Fehler, das neue Feature oder die Aufgaben, die durchzuführen sind. Sei dabei so ausführlich, wie möglich, ohne einfach zu Sabbeln.\n\n*WARUM* Das Ziel des neuen Features zu verstehen oder den Grund für eine Änderung zu kennen hilft bei  Wahr der richtigen (Art der) Implementierung! \n\n*AKZEPTANZKRITERIEN*\n * Das ist eine Checkliste!\n * Jedes Kriterium muss vom Reviewer abgenommen werden.\n * Jedes Kriterium könnte Bestandteil eines (Integrations-) Tests sein.\n * Kriterien nachträglich zu ändern muss erklärt und dokumentiert werden."
   }
 ]
