@@ -1,3 +1,7 @@
+type ButtonProps = {
+  cancel?: any
+}
+
 type DescriptionTemplate = {
   id: string,
   name: string,

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Preview from './Preview';
 import Selector from './Selector';
-import './App.css';
 import IconTemplate from './template.svg';
+import { AppBody, AppContainer, AppFooter, AppLoader, Button } from './App.styles';
 
 function App() {
   const [isActive, setActive] = useState(false);
@@ -55,32 +55,28 @@ function App() {
   }
 
   return (
-    <div className={'jt-app' + (isActive ? ' active' : '')}>
-      <header className="jt-app-header">
-        <div className="jt-app-loader">
-          <button onClick={handleToggleState}>
-            <IconTemplate fill="#fff" height="20" width="20" viewBox="0 0 1000 1000" />
-          </button>
-        </div>
-      </header>
-      <div className="jt-app-body">
+    <AppContainer className={isActive ? ' active' : ''}>
+      <AppLoader onClick={handleToggleState}>
+          <IconTemplate fill="#fff" height="20" width="20" viewBox="0 0 1000 1000" />
+      </AppLoader>
+      <AppBody>
         <h6>Choose template</h6>
         {loading
           ? <p>loading…</p>
           : <>
               <Selector current={template} list={templateList} onChange={setTemplate} />
               <Preview template={template} />
-              <button onClick={handleApply}>Apply</button>
-              <button className="cancel"
-                      onClick={handleToggleState}>Cancel</button>
+              <Button onClick={handleApply}>Apply</Button>
+              <Button cancel
+                      onClick={handleToggleState}>Cancel</Button>
             </>
           }
-        <footer>
-          Create a <a href="https://github.com/Bike24/jira-description-templates/edit/main/data/jira-description-templates.json"
-                      target="_blank">Pull Request</a> to add new templates.
-        </footer>
-      </div>
-    </div>
+      </AppBody>
+      <AppFooter>
+        Create a <a href="https://github.com/Bike24/jira-description-templates/edit/main/data/jira-description-templates.json"
+                    target="_blank">Pull Request</a> to add new templates.
+      </AppFooter>
+    </AppContainer>
   )
 }
 
