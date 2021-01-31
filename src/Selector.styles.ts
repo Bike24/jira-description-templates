@@ -1,22 +1,6 @@
-.jt-select-wrapper {
-  width: 200px;
-  position: relative;
-}
+import Styled from 'styled-components';
 
-.jt-select-wrapper::before {
-  font-family: fontello;
-  content: "▼";
-  font-size: 16px;
-  position: absolute;
-  right: 10px;
-  top: 6px;
-  color: #fff;
-}
-
-.jt-select-wrapper select {
-  -moz-appearance: none;
-  -moz-padding-start: calc(10px - 3px);
-  -webkit-appearance: none;
+export const Select = Styled.select`
   appearance: none;
   border: none;
   width: 100%;
@@ -29,9 +13,23 @@
   border-radius: 3px;
   outline: none;
   cursor: pointer;
-}
+`;
 
-.jt-select-wrapper select option {
+export const Option = Styled.option`
   color: #fff;
   background-color: #282c34;
-}
+`;
+
+export const SelectorWrapper = Styled.div`
+  width: 200px;
+  position: relative;
+  &::before {
+    font-family: fontello;
+    content: "▼";
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    color: #fff;
+  }
+`;

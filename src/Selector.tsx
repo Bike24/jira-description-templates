@@ -1,5 +1,5 @@
 import React from 'react';
-import './Selector.css';
+import { SelectorWrapper, Select, Option } from './Selector.styles';
 
 function Selector(props: SelectorProps) {
 
@@ -10,14 +10,14 @@ function Selector(props: SelectorProps) {
   }
 
   return (
-    <div className="jt-select-wrapper">
-      <select value={props.current.id}
+    <SelectorWrapper>
+      <Select value={props.current.id}
               onChange={ e => select(e.target.value)}>
         {props.list.map((item: Selectable) => (
-          <option value={item.id}>{item.name}</option>
+          <Option value={item.id}>{item.name}</Option>
         ))}
-      </select>
-    </div>
+      </Select>
+    </SelectorWrapper>
   )
 }
 
