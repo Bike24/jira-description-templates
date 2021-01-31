@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import './Preview.css';
+import { H6, PreviewArea } from './Preview.styles';
+
 
 function Preview(props: PreviewProps) {
   const [loading, setLoading] = useState(true);
@@ -33,15 +34,15 @@ function Preview(props: PreviewProps) {
   }, [props.template]);
 
   return (
-    <div className="jt-preview">
-      <h6>Preview</h6>
-      <div className="jt-preview-rendered">
+    <>
+      <H6>Preview</H6>
+      <PreviewArea>
         { loading
           ? <p>loading…</p>
           : <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />
         }
-      </div>
-    </div>
+      </PreviewArea>
+    </>
   );
 
 }
